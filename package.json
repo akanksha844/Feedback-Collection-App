@@ -1,0 +1,26 @@
+{
+    "name": "server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": " nodemon index2.js",
+        "start": "node index2.js",
+        "server": "nodemon index2.js",
+        "client": "npm run start --prefix client"
+
+    },
+    "author": "",
+    "license": "ISC",
+    "proxy": {
+        "/auth/google": {
+            "target": "http://localhost:5000"
+        }
+    }
+    "dependencies": {
+        "react": "15.6.1",
+        "react-dom": "15.6.1",
+        "express": "^4.18.1"
+    }
+}
